@@ -1,7 +1,9 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## This function warps a matrix and saves 
+## a cache of inverse matrix if exists
+## It returns a list of 4 method, get/set the matrix and invese
 
 makeCacheMatrix <- function(x = matrix()) {
     inverse <- NULL
@@ -19,7 +21,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This method wraps the solve method
+## It will try to get the cached inverse result if exists
+## If cache doesn't exists, calcuate it and cache it for next use
 
 cacheSolve <- function(x, ...) {
     i <- x$getInverse()
